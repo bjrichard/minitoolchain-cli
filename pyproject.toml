@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minitoolchain"
+version = "0.1.0"
+description = "Minimal developer-tools skeleton: CLI -> workflow -> backend -> result -> mitigation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+minitoolchain = "minitoolchain.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
